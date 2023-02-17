@@ -1,0 +1,45 @@
+@import "./resets.scss";
+@import "./keyboard";
+@import "./variables";
+@import "./control";
+@import "./config";
+
+body {
+    background: linear-gradient(
+        to right,
+        $primary-color,
+        $accent-color,
+        $primary-color);
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drum-machine {
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    box-shadow: 0 0 5rem 1rem $accent-color;
+    margin: auto;
+    background-color: transparent;
+    border-radius: 1rem;
+
+    .wrapper {
+        background-color: $primary-color;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+@include media-sm {
+    .wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

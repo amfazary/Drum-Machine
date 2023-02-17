@@ -1,0 +1,35 @@
+@import "./variables";
+@import "./config";
+
+.keyboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 20vw;
+    margin: 0 auto;
+    
+    .drum-pad {
+        width: 5vw;
+        max-width: 5vw;
+        height: 5vw;
+        border-radius: 0.5rem;
+        background-color: $accent-color;
+        color: $text-color;
+        box-shadow: 0.1rem 0.1rem 0.1rem 0rem $text-color;
+        font-weight: 800;
+    }
+    .active {
+        background-color: $primary-color;
+        color: $accent-color;
+        box-shadow: none;
+    }
+}
+
+@include media-sm {
+    .keyboard {
+        max-width: 25vw;
+    }
+}

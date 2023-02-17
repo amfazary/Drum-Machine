@@ -1,0 +1,31 @@
+@import "./variables";
+@import "./config";
+
+.control {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+        background-color: $accent-color;
+        color: $text-color;
+        box-shadow: 0.1rem 0.1rem 0.1rem 0rem $text-color;
+        font-weight: 800;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    .active {
+        background-color: $primary-color;
+        color: $accent-color;
+        box-shadow: none;
+    }
+
+    h2 {
+        color: $accent-color;
+        width: 15rem;
+        text-align: center;
+    }
+}
